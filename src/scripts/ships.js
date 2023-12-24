@@ -10,7 +10,8 @@ class ship{
     }
 
     isSunk(){
-        return this.isSunk;
+         this.isSunk = true ? this.length == this.hit: false;
+         return this.isSunk;
     }
 
     hit(xCoord, yCoord){
