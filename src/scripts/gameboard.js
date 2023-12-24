@@ -64,4 +64,21 @@ class gameBoard{
         return this.board;
     }
 
+    renderBoard(id){
+        let elements = document.querySelector(id);
+        let nodeList = elements.children;
+    
+        for(var i = 0; i < 10; i++){
+            for(var j = 0; j < 10; j++){
+                if(this.board == 1){
+                    nodeList[i*10 + j].classList.add('one');
+                }else if(this.board == 2){
+                    nodeList[i*10 + j].classList.add('two');
+                }else if(this.board == 3){
+                    nodeList[i*10 + j].classList.add('three');
+                }
+            }
+        }
+    }
+
 }
