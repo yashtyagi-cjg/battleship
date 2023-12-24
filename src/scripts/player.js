@@ -1,4 +1,8 @@
 class player{
+
+    // constructor{
+    //     // this.ship1 =
+    // }
     getXCoord(){
         return (Math.random() % 9)
     }
@@ -7,3 +11,5 @@ class player{
         return Math.random() % 9
     }
 }
+
+export {player};

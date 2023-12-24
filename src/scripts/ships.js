@@ -32,4 +32,10 @@ class ship{
         return false;
     }
 
+    getLength(){
+        return this.length;
+    }
+
 }
+
+export {ship};

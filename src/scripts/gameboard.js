@@ -1,9 +1,9 @@
 class gameBoard{
-    constructor(){
+    constructor(id){
         this.board = new Array(10);
 
         for(var i = 0; i < 10; i++){
-            board[i] = new Array(10);
+            this.board[i] = new Array(10);
         }
 
         for(var i = 0; i < 10; i++){
@@ -11,6 +11,7 @@ class gameBoard{
                 this.board[i][j] = 0;
             }
         }
+        this.id = id;
     }
 
 
@@ -56,25 +57,27 @@ class gameBoard{
                     this.board[i][yCoord] = 2;
                 }
             }
+            this.renderBoard();
+            console.log("Placed");
         }
-
+        console.log("idk");
     }
 
     getBoard(){
         return this.board;
     }
 
-    renderBoard(id){
-        let elements = document.querySelector(id);
+    renderBoard(){
+        let elements = document.querySelector(this.id);
         let nodeList = elements.children;
     
         for(var i = 0; i < 10; i++){
             for(var j = 0; j < 10; j++){
-                if(this.board == 1){
+                if(this.board[i][j] == 1){
                     nodeList[i*10 + j].classList.add('one');
-                }else if(this.board == 2){
+                }else if(this.board[i][j] == 2){
                     nodeList[i*10 + j].classList.add('two');
-                }else if(this.board == 3){
+                }else if(this.board[i][j] == 3){
                     nodeList[i*10 + j].classList.add('three');
                 }
             }
@@ -82,3 +85,6 @@ class gameBoard{
     }
 
 }
+
+
+export {gameBoard};

@@ -1,0 +1,48 @@
+* {
+    border: 1px solid black;
+}
+
+body {
+    min-height: 100vh;
+    margin: 0; /* Remove default body margin */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+button {
+    width: 100%; /* Expand button to fill the grid cell */
+    height: 100%;
+}
+
+#playerGrid {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr); /* Use '1fr' instead of 'fr' */
+    height: 500px;
+    width: 500px;
+}
+
+#computerGrid{
+    display: grid;
+    grid-template-columns: repeat(10, 1fr); /* Use '1fr' instead of 'fr' */
+    height: 500px;
+    width: 500px;
+    
+}
+
+.one{
+    background-color: gray;
+}
+
+.two{
+    background-color: blue;
+}
+
+.three{
+    background-color: red;
+}
+
+button#isVertical{
+    width: 50px;
+    height: 30px;
+}
